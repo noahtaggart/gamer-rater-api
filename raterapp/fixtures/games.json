@@ -1,0 +1,47 @@
+[
+    {
+        "model": "raterapp.game",
+        "pk": 1,
+        "fields": {
+            "title": "The Blockbuster Game",
+            "designer": "Big Potato Game",
+            "description": "Movie trivia game",
+            "year_released": 2016,
+            "number_of_players":6,
+            "age_recommendation":25,
+            "creator":1,
+            "estimated_time_to_play":"2 hours"
+
+
+
+        }
+    },
+    {
+        "model": "raterapp.game",
+        "pk": 2,
+        "fields": {
+            "title": "Monopoly",
+            "designer": "Parker Brothers",
+            "description": "Monopoly is a multi-player economics-themed board game. In the game, players roll two dice to move around the game board, buying and trading properties, and developing them with houses and hotels. Players collect rent from their opponents, with the goal being to drive them into bankruptcy. Money can also be gained or lost through Chance and Community Chest cards, and tax squares.",
+            "year_released": 1935,
+            "number_of_players":2,
+            "age_recommendation":7,
+            "creator":1,
+            "estimated_time_to_play":"20-180 minutes"
+        }
+    },
+    {
+        "model": "raterapp.game",
+        "pk": 3,
+        "fields": {
+            "title": "Catan",
+            "designer": "Klause Teuber",
+            "description": "Catan, previously known as The Settlers of Catan or simply Settlers, is a multiplayer board game designed by Klaus Teuber. It was first published in 1995 in Germany by Franckh-Kosmos Verlag (Kosmos) as Die Siedler von Catan. Players take on the roles of settlers, each attempting to build and develop holdings while trading and acquiring resources. Players gain victory points as their settlements grow; the first to reach a set number of victory points, typically 10, wins.",
+            "year_released": 1995,
+            "number_of_players":4,
+            "age_recommendation":8,
+            "creator":1,
+            "estimated_time_to_play":"1-2 hours"
+        }
+    }
+]
