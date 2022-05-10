@@ -4,3 +4,4 @@ from .category import CategoryView
 from .review import ReviewView
 from .player import PlayerView
 from .rating import RatingView
+from .photo import PhotoView
