@@ -4,5 +4,8 @@
     "python.linting.pylintArgs": [
         "--load-plugins=pylint_django",
         "--django-settings-module=<folder name>.settings",
+    ],
+    "cSpell.words": [
+        "imgstr"
     ]
 }

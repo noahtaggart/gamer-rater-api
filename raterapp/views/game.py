@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from raterapp.models import Game, Player, Category
 from rest_framework.decorators import action
+from django.db.models import Q
 
 class GameView(ViewSet):
     """"Rater app game view"""
@@ -29,7 +30,23 @@ class GameView(ViewSet):
         Returns:
             Response -- JSON serialized list of games
         """
-        games = Game.objects.all()
+        search_text = self.request.query_params.get('q', None)
+        order_by = self.request.query_params.get('orderby', None)
+        
+        if order_by == None and search_text == None:
+            games = Game.objects.all()    
+        elif order_by == "year":
+            games = Game.objects.order_by('-year_released')   
+        elif order_by == "timeestimate":
+            games = Game.objects.order_by('-estimated_time_to_play')   
+        elif order_by == "designer":
+            games = Game.objects.order_by('-designer')   
+        else: 
+            games = Game.objects.filter(
+                Q(title__contains=search_text) |
+                Q(description__contains=search_text) |
+                Q(designer__contains=search_text)
+)
         
         serializer = GameSerializer(games, many=True)
         return Response(serializer.data)
