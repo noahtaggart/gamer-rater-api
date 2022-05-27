@@ -46,7 +46,7 @@ class ReviewView(ViewSet):
             Response -- JSON serialized review instance
         """
         player = Player.objects.get(user=request.auth.user)
-        game = Game.objects.get(pk=request.data['game_id'])
+        game = Game.objects.get(pk=request.data['game'])
     
         review = Review.objects.create(
             content=request.data["content"],
@@ -55,7 +55,7 @@ class ReviewView(ViewSet):
         )
         
         serializer = ReviewSerializer(review)
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
     
     
     

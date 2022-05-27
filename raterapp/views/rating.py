@@ -17,8 +17,8 @@ class RatingView(ViewSet):
         """
         
         try:
-            Rating = Rating.objects.get(pk=pk)
-            serializer = RatingSerializer(Rating)
+            rating = Rating.objects.get(pk=pk)
+            serializer = RatingSerializer(rating)
             return Response(serializer.data)
         except Rating.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
@@ -45,7 +45,7 @@ class RatingView(ViewSet):
             Response -- JSON serialized Rating instance
         """
         player = Player.objects.get(user=request.auth.user)
-        game = Game.objects.get(pk=request.data['game_id'])
+        game = Game.objects.get(pk=request.data['game'])
     
         rating = Rating.objects.create(
             rating=request.data["rating"],
@@ -54,7 +54,18 @@ class RatingView(ViewSet):
         )
         
         serializer = RatingSerializer(rating)
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    
+    
+    def update(self, request, pk):
+        
+        rating = Rating.objects.get(pk=pk)
+        rating.game = Game.objects.get(pk=request.data['game'])
+        rating.rating = request.data['rating']
+        
+        rating.save()
+        
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
     
     
     

@@ -63,12 +63,7 @@ class PhotoView(ViewSet):
         serializer = PhotoSerializer(photo)
         return Response(serializer.data)
     
-    
-    
-    
-    
-    
-    
+
 class PhotoSerializer(serializers.ModelSerializer):
     """JSON serializer for photos"""
     class Meta:

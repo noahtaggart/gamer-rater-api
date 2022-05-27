@@ -1,7 +1,7 @@
 [
     {
         "model": "auth.user",
-        "pk": 2,
+        "pk": 1,
         "fields": {
             "password": "pass",
             "last_login": null,
@@ -9,6 +9,42 @@
             "username": "NoahT",
             "first_name": "Noah",
             "last_name": "T",
+            "email": "meme@me.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2020-08-28T14:51:39.989Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pass",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "NewUser",
+            "first_name": "New",
+            "last_name": "User",
+            "email": "meme@me.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2020-08-28T14:51:39.989Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "password": "pass",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "JoshUser",
+            "first_name": "Josh",
+            "last_name": "User",
             "email": "meme@me.com",
             "is_staff": false,
             "is_active": true,

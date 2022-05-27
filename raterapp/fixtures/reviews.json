@@ -1,0 +1,38 @@
+[
+    {
+        "model": "raterapp.review",
+        "pk": 1,
+        "fields": {
+            "player": 1,
+            "content": "These are test reviews",
+            "game": 1
+        }
+    },
+    {
+        "model": "raterapp.review",
+        "pk": 2,
+        "fields": {
+            "player": 2,
+            "content": "These are test reviews",
+            "game": 1
+        }
+    },
+    {
+        "model": "raterapp.review",
+        "pk": 3,
+        "fields": {
+            "player": 3,
+            "content": "These are test reviews",
+            "game": 1
+        }
+    },
+    {
+        "model": "raterapp.review",
+        "pk": 4,
+        "fields": {
+            "player": 2,
+            "content": "These are test reviews",
+            "game": 2
+        }
+    }
+]

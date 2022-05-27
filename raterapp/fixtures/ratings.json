@@ -1,0 +1,38 @@
+[
+    {
+        "model": "raterapp.rating",
+        "pk": 1,
+        "fields": {
+            "player": 1,
+            "rating": 9,
+            "game": 1
+        }
+    },
+    {
+        "model": "raterapp.rating",
+        "pk": 2,
+        "fields": {
+            "player": 2,
+            "rating": 10,
+            "game": 1
+        }
+    },
+    {
+        "model": "raterapp.rating",
+        "pk": 3,
+        "fields": {
+            "player": 1,
+            "rating": 9,
+            "game": 2
+        }
+    },
+    {
+        "model": "raterapp.rating",
+        "pk": 4,
+        "fields": {
+            "player": 2,
+            "rating": 9,
+            "game": 2
+        }
+    }
+]

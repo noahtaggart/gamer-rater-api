@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gamer Rater Reports</title>
+  </head>
+  <body>
+    <h1>Num of Games without Pics</h1>
+    <ol>
+        {% for game in no_photo_count %}
+            <li> Games without Photo Count: {{ game.NoPhotoCount }} </li>
+        {% endfor %}
+    </ol>
+    <a href={{"/reports/base"}}>Back to Report List</a>
+  </body>
+</html>

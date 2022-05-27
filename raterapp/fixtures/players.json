@@ -6,5 +6,21 @@
             "user": 1,
             "bio": "Me"
         }
+    },
+    {
+        "model": "raterapp.player",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "bio": "Meh"
+        }
+    },
+    {
+        "model": "raterapp.player",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "bio": "mee"
+        }
     }
 ]

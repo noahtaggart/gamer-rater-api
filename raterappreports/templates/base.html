@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gamer Rater Reports</title>
+  </head>
+  <body>
+    <h1>Reports</h1>
+    <ol>
+        <li>
+            <a href={{"/reports/top5games"}}>Top 5 Games</a>
+        </li>
+        <li>
+            <a href={{"/reports/bottom5games"}}>Bottom 5 Games</a>
+        </li>
+        <li>
+            <a href={{"/reports/categoryGameCounts"}}>Categories by Game Count</a>
+        </li>
+        <li>
+            <a href={{"/reports/morethan5"}}>Games for More than 5 Players</a>
+        </li>
+        <li>
+            <a href={{"/reports/mostreviewedgame"}}>Most Reviewed Game</a>
+        </li>
+        <li>
+            <a href={{"/reports/playermostgames"}}>Player with the Most Games Added</a>
+        </li>
+        <li>
+            <a href={{"/reports/gamesunder8"}}>Games for Kids under 8</a>
+        </li>
+        <li>
+            <a href={{"/reports/gamesNoPics"}}>Number of Games without Pictures</a>
+        </li>
+        
+        <li>
+            <a href={{"/reports/playersmostreviews"}}>Players with Most Reviews</a>
+        </li> 
+    </ol>
+  </body>
+
+</html>
